@@ -1,4 +1,6 @@
 FROM alpine
+RUN apk --no-cache add ca-certificates
 WORKDIR /app
-ADD . .
-ENTRYPOINT /app/tezos-streamer
+COPY . .
+
+ENTRYPOINT ./tezos-streamer
