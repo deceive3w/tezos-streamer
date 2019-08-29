@@ -23,7 +23,7 @@ func main() {
 
 	flag.StringVar(&configFile, "c", "", "Config file.")
 	flag.StringVar(&config.HTTPAddress, "address", ":8002", "HTTP address to listen on.")
-	flag.StringVar(&config.RPCUrl, "rpc", "https://mainnet-node.tzscan.io", "RPC Url")
+	flag.StringVar(&config.RPCUrl, "rpc", "https://api.tez.ie/rpc/mainnet", "RPC Url")
 
 	flag.Parse()
 
