@@ -16,7 +16,7 @@ jobs:
     steps:
       - setup_remote_docker
       - checkout
-      - run: echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+      - run: echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
       - run: curl -sL https://git.io/goreleaser | bash
 workflows:
   version: 2
