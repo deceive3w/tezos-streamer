@@ -102,7 +102,7 @@ func (s *Streamer) Start() {
 		err := s.client.GetMonitorHeads(context.Background(), "main", cMonitorBlock)
 		if err != nil {
 			errCount++
-			log.Error("Error encountered while trying to connect to rpc node (err count: %d): %s\n", errCount, err.Error())
+			log.Errorf("Error encountered while trying to connect to rpc node (err count: %d): %s", errCount, err.Error())
 			time.Sleep(time.Duration(errCount) * time.Second)
 		}
 	}
